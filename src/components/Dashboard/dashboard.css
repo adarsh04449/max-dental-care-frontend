@@ -1,0 +1,159 @@
+/* Reset and Base */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+  
+
+
+  /* Hero Banner */
+.banner-wrapper {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 */
+    overflow: hidden;
+}
+  
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+.dashboard-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+@media (min-width: 901px) {
+    .banner-wrapper {
+      padding-top: 40%;
+    }
+}
+  
+@media (max-width: 768px) {
+    .banner-wrapper {
+      padding-top: 75%;
+    }
+}
+  
+  /* Content Section */
+.content-section {
+    padding: 3rem 1rem;
+    font-family: "Jost", sans-serif;
+    text-align: center;
+}
+  
+  /* Layout Container */
+.box-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+}
+  
+  /* Card Styling */
+.content-card {
+    flex: 1 1 500px;
+    background-color: #f4f4f4;
+    padding: 3rem;
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+  
+  /* Media Side */
+.media {
+    flex: 1 1 500px;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    margin-left: -80px; /* This creates the overlap */
+}
+  
+.media-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+  
+  /* List of Services */
+.service-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+}
+  
+.service-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #374151;
+}
+  
+.check-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px); 
+  transition-delay: var(--delay, 0s);
+  filter: blur(6px);
+  transition: 
+    opacity 0.8s ease-out, 
+    transform 0.8s ease-out, 
+    filter 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+@media (max-width:1101px) {
+    .media {
+        display: none;
+      }
+}
+  
+  /* Responsive Stacking */
+@media (max-width: 786px) {
+    .box-layout {
+      flex-direction: column;
+    }
+  
+    .content-card {
+      padding: 1.5rem;
+    }
+  
+    .service-list {
+      grid-template-columns: 1fr;
+      margin-top: 1.5rem;
+    }
+}
+  

@@ -1,0 +1,36 @@
+.icon-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* default: 2 columns */
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 3.5rem auto;
+    justify-items: center;
+    max-width: 1000px;
+  }
+  
+  @media (min-width: 992px) {
+    .icon-bar {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+    }
+  }
+  
+  .icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 220px;
+  }
+  
+  .icon {
+    height: 5rem;
+    width: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .icon-item span {
+    font-size: 1rem;
+    color: #333;
+  }
+  

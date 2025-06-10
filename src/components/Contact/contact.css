@@ -1,0 +1,75 @@
+
+.contact-header {
+    font-size: 2rem;
+    color: #000000;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    flex: 1 1 250px;
+    min-width: 280px;
+    min-height: 280px;
+    box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.call-button {
+    margin-top: 10px;
+    padding: 0.5rem 1rem;
+    background-color: #4e86d5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.call-button:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 430px) {
+    .contact-grid {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+  
+    .contact-card {
+        min-width: 100%;
+        max-width: 280px;
+        padding: 1.5rem;
+        min-height: auto;
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between; 
+        align-items: center;
+    }
+}
