@@ -17,7 +17,7 @@ const ReviewPage = () => {
 
   const allReviews = async() => {
     try {
-      const response = await axios.get("http://localhost:3000/reviews");
+      const response = await axios.get("https://max-dental-care-backend.onrender.com/reviews");
       setReviews(response.data);
       setStatus("forms fetched");
     }catch (error) {
