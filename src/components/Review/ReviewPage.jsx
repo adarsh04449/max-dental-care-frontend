@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import ReviewForm from "./ReviewForm";
-import "./ReviewPage.css";
+import "./reviewPage.css";
 import Footer from "../Footer/Footer"
 import axios from "axios";
 import Rating from "@mui/material/Rating";
